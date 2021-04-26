@@ -11,22 +11,16 @@ function respond(req, res, next) {
     const pergunta = req.body.pergunta
     const msg = `Olá, você perguntou por ${pergunta}`
     const resposta = finder.findByQuery(faq,pergunta)
-    res.send(resposta)
+    let json = {resposta:resposta}
+    res.json(json)
     next()
 }
 
-function faque(req,res,next){
-    let result = finder.findByQuery(faq,req.params.word)
-    //res.send(faq.map((x)=>x.Question).filter((y)=>y.indexOf(req.params.word)>-1));   
-    res.send(result)
-    next()
-}
 
 var server = restify.createServer();
 server.use(restifyBodyParser());
 server.post('/thechatbot/v1/answerme', respond);
-server.get('/thechatbot/v1/faq/:word', faque);
-
+server.name = 'thechatbot by restify'
 server.listen(PORT, function() {
     console.log('%s listening at %s', server.name, server.url);
 });
