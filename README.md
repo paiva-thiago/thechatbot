@@ -23,13 +23,28 @@ Dude, it is REALLY simple!
 **Corpo da requisição de exemplo/Example  request body:**
 
 ```json
-    {"pergunta":"plus one"}
+    {
+        "pergunta":"plus one"
+    }
 ``` 
 
 **Corpo da resposta/Response Body**
 
 ```json
-    {"resposta":"Two!"}
+    {
+        "resposta":"Two!"
+    }
+``` 
+
+As respostas podem conter tags html, mas se por algum motivo o cliente não aceitar html, basta acrescentar um `html:false` no JSON da requisição, como no exemplo abaixo:
+
+The answers may contain html tags, but if your client for some reason do not accept html tags, just add an `html:false` in JSON request, like example below:
+
+```json
+    {
+        "pergunta":"plus one",
+        "html":false
+    }
 ``` 
 
 ## Author
@@ -41,9 +56,9 @@ Dude, it is REALLY simple!
 * Github: [@paiva-thiago](https://github.com/paiva-thiago)
 * LinkedIn: [@paivathiago](https://linkedin.com/in/paivathiago)
 
-## Show your support/
+## Apóia a gente! / Show your support
 
-Ajudou? dá uma ⭐️ marota!
+Ajudou? dá uma ⭐️ marota no repositório!
 Give a ⭐️ if this project helped you!
 
 
