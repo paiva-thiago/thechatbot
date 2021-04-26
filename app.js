@@ -10,12 +10,14 @@ function respond(req, res, next) {
     console.log(req.body)
     const pergunta = req.body.pergunta
     const msg = `Olá, você perguntou por ${pergunta}`
-    res.send(msg)
+    const resposta = finder.findByQuery(faq,pergunta)
+    res.send(resposta)
     next()
 }
 
 function faque(req,res,next){
     let result = finder.findByQuery(faq,req.params.word)
+    //res.send(faq.map((x)=>x.Question).filter((y)=>y.indexOf(req.params.word)>-1));   
     res.send(result)
     next()
 }
