@@ -1,27 +1,12 @@
-var restify = require('restify')
-const faq = require('./data/faq.json')
-const finder = require('./lib/finder.js')
+const srvchat = require('./lib/srvchat.js')
+const routingFunctions = require('./lib/rfunctions.js')
 
-const restifyBodyParser = require('restify-plugins').bodyParser
+const PORT = process.env.PORT || 29005
 
-const PORT = 29005
-
-function answerFunction(req, res, next) {
-    const pergunta = req.body.pergunta
-    let resposta = finder.findByQuery(faq,pergunta)
-    if((req.body.html!=undefined)&&(!req.body.html)){
-        resposta = resposta.replace(/(<([^>]+)>)/ig,"")
-    }
-    let json = {resposta:resposta}
-    res.json(json)
-    next()
-}
-
-
-var server = restify.createServer();
-server.use(restifyBodyParser());
-server.post('/thechatbot/v1/answerme', answerFunction);
-server.name = 'thechatbot by restify'
+let server = srvchat.newServer("thechatbot")
+server.post('/thechatbot/v1/answerme', routingFunctions.answerFunction)
+server.get('/thechatbot/v1/ping', routingFunctions.iAmOk)
 server.listen(PORT, function() {
     console.log('%s listening at %s', server.name, server.url);
+    console.log('%s está rodando em %s', server.name, server.url);
 });
