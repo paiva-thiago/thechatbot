@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 29005
 
 let server = srvchat.newServer()
 server.post('/thechatbot/v1/answerme', routingFunctions.answerFunction)
+server.post('/thechatbot/v1/tdbot', routingFunctions.tileDeskAnswerFunction)
 server.get('/thechatbot/v1/ping', routingFunctions.iAmOk)
 server.listen(PORT, function() {
     console.log('%s listening at %s', server.name, server.url);
