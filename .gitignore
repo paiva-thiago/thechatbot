@@ -103,6 +103,4 @@ dist
 # TernJS port file
 .tern-port
 
-# faq.json
 data/
-data/faq.json

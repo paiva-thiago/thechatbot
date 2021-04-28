@@ -5,14 +5,15 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app"
+    "start": "node app.js"
   },
-  "author": "Paiva",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "@tiledesk/tiledesk-chatbot-client": "^0.5.29",
-    "html-entities": "^2.3.2",
-    "restify": "^8.5.1",
-    "restify-plugins": "^1.6.0"
+    "@tiledesk/tiledesk-chatbot-client": "^0.5.17",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "html-entities": "^2.3.2"
   }
 }
