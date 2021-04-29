@@ -1,19 +1,19 @@
-# Welcome to thechatbot 
+# Welcome to thechatbot 🤖
 ![Version](https://img.shields.io/badge/version-0.0.1--BETA-blue.svg?cacheSeconds=2592000)
 [![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](#)
 [![Twitter: paiva\_thiago](https://img.shields.io/twitter/follow/paiva\_thiago.svg?style=social)](https://twitter.com/paiva\_thiago)
 
-Então... é um chatbot em API bem simples para uso de perguntas e respostas... Um FAQ 2.0!
+Então... é um chatbot em API bem simples para uso de perguntas e respostas... A FaqBot!
 
-So... this is a simple chatbot API for use in FAQs... Like a FAQ 2.0!
+So... this is a simple chatbot API for use in FAQs... A FaqBot
 
-## Como instalar e executar/How to install and run
+## Como instalar e executar/How to install and run 💻
 
 ```sh
 npm install && npm start
 ```
 
-## Endpoint
+## Endpoint 🏹
 
 Cara, é BEM simples!
 Dude, it is REALLY simple!
@@ -47,7 +47,7 @@ The answers may contain html tags, but if your client for some reason do not acc
     }
 ``` 
 
-## Author
+## Author 👦
 
 👤 **Thiago Paiva**
 
@@ -56,7 +56,7 @@ The answers may contain html tags, but if your client for some reason do not acc
 * Github: [@paiva-thiago](https://github.com/paiva-thiago)
 * LinkedIn: [@paivathiago](https://linkedin.com/in/paivathiago)
 
-## Apóia a gente! / Show your support
+## Apóia a gente! / Show your support 👏
 
 Ajudou? dá uma ⭐️ marota no repositório!
 Give a ⭐️ if this project helped you!
